@@ -118,74 +118,6 @@ Let op: veel schoolnetwerken (vooral gastnetwerken) laten laptops niet met elkaa
 
 ---
 
-## Docentlaptop: model voor module L
-
-Module L (AI die dingen doet) gebruikt een demo door de docent met **`ministral-3:3b`** van Mistral AI. Fietje kan geen tools gebruiken. Dit model is alleen nodig op de **docentlaptop**: ± 3 GB extra op schijf en ± 2,7 GB werkgeheugen tijdens de demo.
-
-**Manier 1 – bij een bestaande installatie (aanbevolen).** Dubbelklik `start.bat` (dan draait Ollama), open een opdrachtprompt (`cmd`) in de installatiemap en typ:
-
-```
-ollama\ollama.exe pull ministral-3:3b
-```
-
-Het model komt vanzelf in de submap `modellen`. Controleren: `status.bat`, of `ollama\ollama.exe list`.
-
-**Manier 2 – meteen bij het installeren.** Geef alle modellen mee; **Fietje moet als eerste in de lijst staan**, want het script test met het eerste model:
-
-```
-installeer.bat -Modellen bramvanroy/fietje-2b-chat:Q5_K_M,bge-m3,ministral-3:3b
-```
-
-**USB-sticks.** Zet het model **niet** op de sticks voor de klas: `kopieer-naar-laptop.bat` kopieert de hele map, dus ook elk extra model, naar elke kinderlaptop. Dat kost per laptop 3 GB en minuten extra. Gebruik de stick van de docentlaptop zelf, of haal het model op de docentlaptop op met manier 1.
-
-**Testen:** open `code\docent_demo_tools.py` in Thonny en druk op F5. Staat dat bestand er niet (een installatie van vóór module L)? Kopieer het dan uit `installatie\sjabloon\code`. De eerste vraag laadt het model (± 20 seconden). Is de docentlaptop ook de docent-server voor de klas? Doe de demo dan niet terwijl de kinderen vragen stellen: beide modellen tegelijk vragen veel geheugen.
-
----
-
-## Optioneel: module F – tekenen
-
-Module F (AI die tekent) heeft een **tekenmotor** nodig. Die zit níet in de gewone installatie, omdat hij groot is en veel werkgeheugen vraagt. Je installeert hem per laptop met een apart script.
-
-| | |
-|---|---|
-| Wat | **OpenVINO GenAI** (rekenmotor van Intel, draait in de Python van Thonny) + het tekenmodel **LCM Dreamshaper v7** (int8, licentie MIT) |
-| Downloaden | ± 1,3 GB (eenmalig) |
-| Op schijf | ± 3,9 GB in de submap `tekenen\` (model 1,0 GB, rekenmotor 0,25 GB, cache 2,6 GB) |
-| Werkgeheugen | ± 5 GB tijdens het tekenen |
-| Snelheid (onze test, AMD Ryzen AI 7 350) | ± 5 s per plaatje (4 stappen, 512 × 512); laden 3 s (13 s de allereerste keer) |
-| Laptop | Gewone Intel- of AMD-processor (x64), **8 GB werkgeheugen of meer**. Niet op ARM-laptops (Snapdragon). |
-
-**Installeren.** Eerst de gewone installatie (route A of B). Daarna, met internet:
-
-```
-installeer-tekenen.bat
-installeer-tekenen.bat -Doel E:\GeestInDeFles     (andere map of USB-stick)
-```
-
-Het script controleert de laptop, haalt de rekenmotor en het model op (gepinde versies), kopieert `module_f_tekenen.py` naar `code\` (als die er nog niet staat) en **tekent een testplaatje** (`tekenen\testplaatje.png`). Het meldt hoe lang dat duurde; boven de 60 seconden krijg je een waarschuwing. Afgebroken? Start het opnieuw; het gaat verder waar het was. Na de installatie is geen internet meer nodig.
-
-**USB-stick.** Installeer de tekenmotor op de stick (`-Doel E:\GeestInDeFles`). `kopieer-naar-laptop.bat` kopieert de map `tekenen\` dan vanzelf mee (± 1,3 GB extra per laptop). Op een stick haalt het script de cache weg, want die hoort bij één processor; elke laptop maakt hem bij de eerste tekening zelf (± 15 seconden, daarna 2,6 GB op die laptop). Wil je module F niet op alle laptops? Gebruik dan aparte sticks met en zonder tekenmotor.
-
-**In de les.** Op een laptop met 8 GB: zet de geest uit (`stop.bat`) en sluit browsers. Ollama met Fietje en de tekenmotor samen passen niet in 8 GB.
-
-**Verwijderen.** `opruimen.bat` haalt alles weg, ook `tekenen\`. Alleen de tekenmotor weghalen (de geest blijft):
-
-```
-installeer-tekenen.bat -Verwijder
-```
-
-**Problemen.**
-
-| Probleem | Oplossing |
-|---|---|
-| *"De tekenmotor is niet geïnstalleerd op deze laptop"* | Draai `installeer-tekenen.bat` met de juiste `-Doel`, of gebruik plan B (de docent tekent op de beamer, zie hoofdstuk 25). |
-| *"Deze laptop heeft een ARM64-processor"* | OpenVINO werkt niet op ARM-laptops. Plan B. |
-| Een plaatje duurt langer dan een minuut | Te weinig werkgeheugen of een trage processor. Sluit andere programma's en de geest; helpt dat niet: plan B. |
-| Foutmelding over `openvino` bij het testen | Start het script opnieuw. Blijft het fout gaan: `installeer-tekenen.bat -Verwijder` en opnieuw installeren. Oude processors (van vóór ± 2013, zonder AVX2) worden mogelijk niet ondersteund. |
-| Virusscanner of schijf vol | Er is ± 4,5 GB vrije ruimte nodig tijdens het installeren. |
-
----
-
 ## Wat staat er in de map?
 
 | | |
@@ -200,7 +132,6 @@ installeer-tekenen.bat -Verwijder
 | `code\` | De Python-code van het kind |
 | `modellen\` | De taalmodellen (± 3 GB) |
 | `stemmen\` | De Piper-stemmen voor tekst-naar-spraak |
-| `tekenen\` | Alleen als je de tekenmotor voor module F hebt geïnstalleerd (± 3,9 GB) |
 | `ollama\`, `thonny\` | De programma's |
 | `beheer\` | De scripts achter de `.bat`-bestanden |
 | `versies.txt` | Welke versies er zijn geïnstalleerd |
@@ -258,4 +189,3 @@ Werkt Piper onverhoopt niet, dan valt `zeg()` terug op de Windows-stem via `pytt
 - De versies staan bovenaan `installeer.ps1` (`$OllamaVersie`, `$ThonnyVersie`, `$PythonPakketten`) en in de standaardwaarde van `-Modellen`. Pas ze bewust aan en test daarna opnieuw; nieuwe versies kunnen zich anders gedragen.
 - `installatie\sjabloon\` wordt 1-op-1 naar de installatiemap gekopieerd. Bestanden in `code\` worden nooit overschreven als ze al bestaan.
 - Getest op: Windows 11 (build 26200), Windows PowerShell 5.1, Ollama 0.40.16, Thonny 5.0.1 (Python 3.14), piper-tts 1.8.0, november 2026.
-- De tekenmotor (module F) heeft eigen versies bovenaan `installeer-tekenen.ps1` (`$TekenPakketten`, `$ModelVersie` en de lijst `$ModelBestanden` met bestandsgroottes). De wheels van OpenVINO moeten passen bij de Python-versie van Thonny (nu 3.14, `cp314`): controleer dat bij een nieuwe Thonny. Getest met openvino-genai 2026.4.1.0, november 2026.

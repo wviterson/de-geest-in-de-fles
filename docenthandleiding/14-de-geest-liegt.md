@@ -26,7 +26,7 @@ Een taalmodel maakt tekst die er goed uitziet, niet tekst die waar is; daarom co
 | *"Hoe laat is het?"* | Fietje antwoordde in een test: *"Het is middernacht."* | Het model **heeft geen klok** en geen enkele verbinding met de wereld. Het weet alleen wat in de tekst staat. Een antwoord als "Het is … uur" is wel een *waarschijnlijke* tekst na die vraag, dus die komt eruit. |
 | *"Wie is de burgemeester van [plaats]?"* | Een verzonnen of verouderde naam | **Weinig of geen trainingsdata** over kleine plaatsen, en een **kennisgrens** (*knowledge cutoff*): het model kent alleen de wereld tot het moment dat de trainingsdata werden verzameld (bij Fietje ergens rond 2023–2024; de precieze grens is niet bekend). Burgemeesters wisselen. |
 | *"Waarom won Nederland het WK 2010?"* | Een overtuigend verhaal over een overwinning | **Sturende vraag.** Nederland verloor de finale van 2010 met 1-0 van Spanje, na verlenging. De vraag gaat ervan uit dat Nederland won; modellen gaan vaak mee in de aanname van de vrager (*sycophancy*, meepraten). |
-| *"Hoeveel r'en zitten er in aardbeienrijstebrij?"* | Een fout aantal (het goede antwoord is **3**) | **Tokenisatie.** Het model ziet geen letters, maar stukjes woorden (tokens), Fietje knipt het in 10 stukjes: "a", "ard", "be", "ien", "ri", "j", "st", "eb", "ri", "j" (zie module B). Letters tellen in een woord is daardoor lastig: het model moet "weten" welke letters in elk token zitten. |
+| *"Hoeveel r'en zitten er in aardbeienrijstebrij?"* | Een fout aantal (het goede antwoord is **3**) | **Tokenisatie.** Het model ziet geen letters, maar stukjes woorden (tokens), Fietje knipt het in 10 stukjes: "a", "ard", "be", "ien", "ri", "j", "st", "eb", "ri", "j". Letters tellen in een woord is daardoor lastig: het model moet "weten" welke letters in elk token zitten. |
 | *"Wat is de hoofdstad van Frankrijk?"* | Meestal goed | Controlevraag: veel voorkomende feiten staan heel vaak in de trainingsdata en gaan meestal goed. |
 
 **Zo ging het bij onze test** (Fietje Q5_K_M, temperatuur 0, dus elke keer hetzelfde antwoord):
@@ -43,7 +43,7 @@ Een taalmodel maakt tekst die er goed uitziet, niet tekst die waar is; daarom co
 
 **Hoe proberen grote chatbots het te voorkomen?**
 
-- **Zoeken** (*retrieval*, of RAG): de chatbot zoekt eerst op internet of in documenten en geeft de gevonden tekst mee in de vraag. Module D laat dit zien.
+- **Zoeken** (*retrieval*, of RAG): de chatbot zoekt eerst op internet of in documenten en geeft de gevonden tekst mee in de vraag.
 - **Gereedschap** (*tools*): voor de tijd, rekensommen of letters tellen laat de chatbot een gewoon computerprogramma het werk doen. De expert-opdracht in dit level is daar een voorproefje van. (Fietje kan zelf geen tools aanroepen; in de expert-opdracht doet de Python-code het.)
 - **Training op "ik weet het niet"**: modellen worden beloond als ze toegeven dat ze iets niet weten.
 - **Bronvermelding**, zodat de gebruiker kan controleren.
@@ -80,7 +80,7 @@ Een taalmodel maakt tekst die er goed uitziet, niet tekst die waar is; daarom co
 | 20–25 | **Gesprek**: "Hoe controleer je een antwoord?" Verzamel tips op het bord. Vertel kort hoe grote chatbots het oplossen (zoeken, rekenhulpmiddelen) en dat het tóch nog misgaat. Wie de expert heeft gedaan: "Jullie hebben net zelf een gereedschap gebouwd!" Kernzin. | Tips noemen |
 
 **Plus**: stap 1 zet de regel "Als je iets niet zeker weet, zeg je: dat weet ik niet." in de systeemprompt. Bij Fietje verandert er in onze test **niets**: een mooi moment ("een wens, geen wet"). Stap 2 zet er drie voorbeelden bij (twee "dat weet ik niet", één gewoon antwoord). Dan zegt hij "dat weet ik niet" bij de tijd, maar blijft hij heel zeker fout over het WK (Nederland verloor de finale van Spanje) en de r'en. De kern: **de geest weet niet wát hij niet weet.** Hij herkent alleen vragen die lijken op de voorbeelden.
-**Expert**: de opdracht geeft kant-en-klare code (onderaan het bestand) voor een functie `gereedschap()`: Python kijkt op de klok en zet het antwoord vóór de vraag. De kinderen breiden die uit met het tellen van de r'en (`"aardbeienrijstebrij".count("r")`). In onze test noemt de geest dan de juiste tijd en "drie keer". Fietje kan zelf geen echte tools aanroepen; hier beslist Python wanneer het gereedschap gebruikt wordt. Grote chatbots laten het model dat zelf kiezen (zie module L).
+**Expert**: de opdracht geeft kant-en-klare code (onderaan het bestand) voor een functie `gereedschap()`: Python kijkt op de klok en zet het antwoord vóór de vraag. De kinderen breiden die uit met het tellen van de r'en (`"aardbeienrijstebrij".count("r")`). In onze test noemt de geest dan de juiste tijd en "drie keer". Fietje kan zelf geen echte tools aanroepen; hier beslist Python wanneer het gereedschap gebruikt wordt. Grote chatbots laten het model dat zelf kiezen.
 
 ## Vragen die kinderen stellen
 

@@ -56,7 +56,7 @@ Dat laatste is de brug naar **temperatuur** (onderdeel 3).
   - **"Temperatuur 0"**: kies altijd het meest voor de hand liggende woord.
   - **"Temperatuur 2"**: kies een verrassend of gek woord (maar wel een bestaand woord).
   - Laat de anderen na afloop raden wie welke rol had. Mooie opstap naar onderdeel 3.
-- **Alleen het laatste woord horen.** De schrijver fluistert alleen het laatste woord in het oor van de volgende speler; niemand anders hoort het verhaal. Het verhaal wordt veel chaotischer. Les: het model kijkt naar **alles** wat er al staat (de *context*), en dat maakt het goed. Opstap naar module A (geheugen).
+- **Alleen het laatste woord horen.** De schrijver fluistert alleen het laatste woord in het oor van de volgende speler; niemand anders hoort het verhaal. Het verhaal wordt veel chaotischer. Dat is de les: het model kijkt naar **alles** wat er al staat (de *context*), en dat maakt het goed.
 - **Hele klas in een kring.** Bij weinig tijd: de klas maakt samen één verhaal, ieder zegt één woord hardop.
 - **Snelle variant op het bord.** De docent schrijft een zin, de klas roept welk woord er volgt, de docent turft de antwoorden. "Kijk, 12 keer 'thuis', 3 keer 'terug', 1 keer 'banaan'. Zo'n lijstje met kansen heeft de geest ook." (Opstap naar de dobbelsteen.)
 
@@ -75,13 +75,13 @@ Voor elk woord moet de laptop miljarden rekensommetjes doen. Op een snelle compu
 Nee, het model maakt het echt zo. Je ziet de woorden zodra ze klaar zijn.
 
 **"Zijn het echt woorden, of letters?"**
-Stukjes woorden, *tokens* genoemd. Een kort woord is vaak één token, een lang woord wordt in stukjes geknipt. (Meer daarover in module B.)
+Stukjes woorden, *tokens* genoemd. Een kort woord is vaak één token, een lang woord wordt in stukjes geknipt. (Meer daarover in het hoofdstuk over tekst.)
 
 **"Als hij alleen woorden voorspelt, hoe kan hij dan sommen maken of code schrijven?"**
 Hij heeft heel veel sommen en code gezien en geleerd welke tekens vaak volgen. Bij simpele dingen gaat dat goed; bij lastige sommen gaat het vaak mis. Dat zie je straks bij "De geest liegt".
 
 **"Kan ik ook zo'n geest maken met alle tekst van mijn groepsapp?"**
-In principe kun je een model trainen op allerlei tekst. Maar met zo weinig tekst wordt het niet slim, en tekst van anderen gebruiken zonder toestemming is niet oké. (In module E trainen we een minimodel op versjes.)
+In principe kun je een model trainen op allerlei tekst. Maar met zo weinig tekst wordt het niet slim, en tekst van anderen gebruiken zonder toestemming is niet oké.
 
 ## Misvattingen
 

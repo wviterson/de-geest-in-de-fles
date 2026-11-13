@@ -46,7 +46,7 @@ Ollama gebruikt hiervoor standaardwaarden (volgens de documentatie onder meer to
 
 **Waarom doet determinisme ertoe?**
 
-- **Wetenschap en testen:** wie een AI wil testen (module K), wil dat een proef herhaalbaar is.
+- **Wetenschap en testen:** wie een AI wil testen, wil dat een proef herhaalbaar is.
 - **Fouten zoeken:** een programmeur wil een gek antwoord kunnen nadoen.
 - **Games:** Minecraft gebruikt ook een seed om dezelfde wereld opnieuw te maken. Dat kennen veel kinderen; gebruik het!
 - **Betrouwbaarheid:** in situaties waar je steeds hetzelfde antwoord wilt (een samenvatting, een classificatie) kiest men een lage temperatuur.

@@ -38,7 +38,7 @@ Werkt Piper niet, dan valt `zeg()` terug op de ingebouwde Windows-stem, die op d
 
 Tips die je kinderen kunt meegeven: bel bij een vreemd verzoek **zelf terug** op het bekende nummer; spreek in het gezin een **codewoord** af; wees voorzichtig met het online zetten van veel spraakopnames van jezelf.
 
-**Regelgeving.** De Europese AI-verordening (EU AI Act) verplicht onder meer dat door AI gemaakte of bewerkte beeld-, geluids- en video-inhoud die op echt lijkt (*deepfakes*), als zodanig herkenbaar wordt gemaakt. Die transparantieregels (artikel 50) gelden sinds 2 augustus 2026; voor sommige verplichtingen gelden overgangstermijnen, en de precieze uitwerking en handhaving zijn nog in ontwikkeling. Verdieping in module H.
+**Regelgeving.** De Europese AI-verordening (EU AI Act) verplicht onder meer dat door AI gemaakte of bewerkte beeld-, geluids- en video-inhoud die op echt lijkt (*deepfakes*), als zodanig herkenbaar wordt gemaakt. Die transparantieregels (artikel 50) gelden sinds 2 augustus 2026; voor sommige verplichtingen gelden overgangstermijnen, en de precieze uitwerking en handhaving zijn nog in ontwikkeling.
 
 ## Uitleg voor kinderen
 

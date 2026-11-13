@@ -76,25 +76,6 @@ Alle levels gebruiken het hulpbestand `fles.py`, dat de vraag naar Ollama stuurt
 
 **Snelle kinderen:** elk level heeft onderaan een *plus*- en een *expert*-opdracht. Wie klaar is, gaat daarmee door; niemand hoeft te wachten. Trage tweetallen mogen plus en expert gerust overslaan.
 
-### Uitbreidingsmodules (voor een lessenreeks)
-
-Deze modules hebben elk een eigen hoofdstuk (20–31).
-
-| Module | Onderwerp | Hoofdstuk |
-|---|---|---|
-| A ★ | Geheugen en context (contextvenster van 2048 tokens) | `20-module-a-geheugen.md` |
-| B | Tokens: hoe "leest" een AI? | `21-module-b-tokens.md` |
-| C ★ | Betekenis als getallen (embeddings, warm-koud-spel) | `22-module-c-betekenis.md` |
-| D ★ | De geest leert lezen (RAG) | `23-module-d-rag.md` |
-| E ★ | Zelf een taalmodel trainen | `24-module-e-trainen.md` |
-| F | AI die tekent (diffusie; optionele installatie) | `25-module-f-tekenen.md` |
-| G ★ | AI als vriend? | `26-module-g-ai-als-vriend.md` |
-| H | Echt of nep? (deepfakes, EU AI Act) | `27-module-h-echt-of-nep.md` |
-| I | De prijs van AI (energie, water, arbeid) | `28-module-i-prijs.md` |
-| J | Van wie is jouw data? | `29-module-j-data.md` |
-| K | Is je geest goed? (testen, benchmarks) | `30-module-k-testen.md` |
-| L | AI die dingen doet (tools, MCP, agents – theorie en een demo door de docent met `ministral-3:3b`; Fietje kan dit niet) | `31-module-l-ai-die-dingen-doet.md` |
-
 Bijlagen: `90-problemen-oplossen.md` en `91-begrippenlijst.md`.
 
 ## Voorbereiding: checklist
@@ -170,7 +151,7 @@ Daar zijn wetenschappers het niet over eens; hoeveel "begrip" er in zulke modell
 Het grote voordeel van lokaal voor deze cursus: **de kinderen zien het kale model**, zonder de laag van filters en hulpmiddelen die grote chatbots eromheen bouwen. Daardoor worden de zwakke plekken zichtbaar, en dat is precies wat we willen laten zien. Het nadeel: ook de filters ontbreken (zie hoofdstuk 01).
 
 **Wat kost het aan energie?**
-Schattingen lopen uiteen en zijn onzeker. Recente schattingen voor één gewone tekstvraag aan een grote chatbot liggen in de orde van **0,3 wattuur**: grofweg een ledlamp die een paar minuten brandt. Het vaak gehoorde "zo veel als een lamp die een uur brandt" is voor een gewone vraag overdreven. Maar: lange antwoorden, "redeneermodellen", plaatjes en video kosten veel meer, en het **trainen** van grote modellen plus de enorme aantallen gebruikers maken het totaal wél groot. Dit komt terug in module I.
+Schattingen lopen uiteen en zijn onzeker. Recente schattingen voor één gewone tekstvraag aan een grote chatbot liggen in de orde van **0,3 wattuur**: grofweg een ledlamp die een paar minuten brandt. Het vaak gehoorde "zo veel als een lamp die een uur brandt" is voor een gewone vraag overdreven. Maar: lange antwoorden, "redeneermodellen", plaatjes en video kosten veel meer, en het **trainen** van grote modellen plus de enorme aantallen gebruikers maken het totaal wél groot.
 
 ## Verder lezen
 

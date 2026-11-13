@@ -1,7 +1,7 @@
 # De Geest in de Fles – lesplan
 
 **Doelgroep:** 11–14 jaar · **Groep:** tot ± 30 kinderen, in tweetallen achter één laptop
-**Opzet:** een **kernmiddag** (± 3,5 uur) die op zichzelf staat, plus **uitbreidingsmodules** voor een lessenreeks.
+**Opzet:** een **kernmiddag** (± 3,5 uur) die op zichzelf staat.
 **Rode draad:** elk kind bouwt zijn eigen *geest*: een lokaal taalmodel (Fietje) dat het met Python bestuurt. Steeds als er iets nieuws gebeurt in de code, volgt er een kort gesprek over wat dat betekent voor AI "in het echt".
 
 Legenda vorm: 🔌 unplugged (zonder computer) · 💻 programmeren · 🎤 demo door de docent · 💬 gesprek of stelling
@@ -51,45 +51,11 @@ Legenda vorm: 🔌 unplugged (zonder computer) · 💻 programmeren · 🎤 demo
 
 ---
 
-## Uitbreidingsmodules (lessenreeks)
-
-Elke module duurt 50–90 minuten en bouwt voort op de kernmiddag. Ze zijn los te kiezen. ★ = sterk aanbevolen.
-
-| Module | Onderwerp | Vorm | Kernvraag | Code |
-|---|---|---|---|---|
-| **A** ★ | **Geheugen en context** | 💻 | Waarom vergeet de geest wat je eerder zei? (berichtenlijst, contextvenster van 2048 tokens) | `module_a_geheugen.py` |
-| **B** | **Tokens** | 🎤💻 | Hoe "leest" een AI? Tokenizer-demo van KU Leuven; waarom tellen moeilijk is | `module_b_tokens.py` |
-| **C** ★ | **Betekenis als getallen** | 💻 | Hoe weet een computer dat *fiets* en *bromfiets* op elkaar lijken? Warm-koud-spel met embeddings | `module_c_warm_koud.py` |
-| **D** ★ | **De geest leert lezen (RAG)** | 💻 | Hoe geef je een AI kennis die hij niet heeft? De geest beantwoordt vragen uit een eigen tekstbestand | `module_d_kennis.py` |
-| **E** ★ | **Zelf een taalmodel trainen** | 💻 | Wat is "trainen" eigenlijk? Een mini-model in pure Python leert van versjes: van wartaal naar woorden | `module_e_trainen.py` |
-| **F** | **AI die tekent** | 🎤💻 | Hoe maakt AI plaatjes? Diffusie: van ruis naar beeld (OpenVINO GenAI met LCM Dreamshaper; optionele installatie) | `module_f_tekenen.py` |
-| **G** ★ | **AI als vriend?** | 💬🔌 | Waarom geeft AI je altijd gelijk? Vleierij, AI-vriendjes (zoals Snapchat My AI), wanneer je met een mens moet praten | – |
-| **H** | **Echt of nep?** | 💬💻 | Deepfakes, labelplicht (EU AI Act), en wat er gebeurt als AI van AI-teksten leert | – |
-| **I** | **De prijs van AI** | 💬🔌 | Energie en water, de mensen die data labelen, geld en de AI-race, grondstoffen. Klopt "lokaal is groener"? | – |
-| **J** | **Van wie is jouw data?** | 💬 | Privacy, gebruiksvoorwaarden, digitale soevereiniteit, open source tegenover open weights | – |
-| **K** | **Is je geest goed?** | 💻 | Hoe test je een AI? Een eigen toetsset met vragen en goede antwoorden; benchmarks | `module_k_testen.py` |
-| **L** | **En nu verder: AI die dingen doet** | 🎤💬 | Tools, MCP en agents, als theorie met een demo door de docent (ander model dan Fietje). AGI: de koffietest. Wie is er aansprakelijk? | – |
-
-**Voorbeeld van een reeks van 6 lessen:**
-
-1. Kernonderdelen 0–3
-2. Kernonderdelen 4–6
-3. Module A en C
-4. Module D en G
-5. Module E
-6. Module I of J als debat, en presentatie van "mijn geest"
-
----
-
 ## Hoe de materialen hierop aansluiten
 
 | Materiaal | Opbouw |
 |---|---|
-| **Opdracht (kinderen)** | Map `code\` met één bestand per level of module: startcode met `TODO`s, onderaan *plus* en *expert*. Waar het nuttig is, schrijven kinderen hun antwoord of voorspelling op een papiertje. |
-| **Docenthandleiding** | Eén hoofdstuk per onderdeel of module, steeds met dezelfde opbouw: kernboodschap · achtergrond voor de docent · uitleg voor kinderen (met beeldspraak) · demo/verloop · te verwachten vragen met antwoorden · misvattingen · veiligheid · bronnen met datum. Bijlagen: installatie, problemen oplossen, begrippenlijst. |
-| **Presentatie** | Eén blok dia's per onderdeel of module, met weinig tekst en vaste beeldspraak (de geest, de dobbelsteen, gips tegenover exoskelet). Bij voorkeur in Markdown (Marp), zodat dia's en handleiding uit één bron komen. |
+| **Opdracht (kinderen)** | Map `code\` met één bestand per level: startcode met `TODO`s, onderaan *plus* en *expert*. Waar het nuttig is, schrijven kinderen hun antwoord of voorspelling op een papiertje. |
+| **Docenthandleiding** | Eén hoofdstuk per onderdeel, steeds met dezelfde opbouw: kernboodschap · achtergrond voor de docent · uitleg voor kinderen (met beeldspraak) · demo/verloop · te verwachten vragen met antwoorden · misvattingen · veiligheid · bronnen met datum. Bijlagen: installatie, problemen oplossen, begrippenlijst. |
+| **Presentatie** | Eén blok dia's per onderdeel, met weinig tekst en vaste beeldspraak (de geest, de dobbelsteen, gips tegenover exoskelet). Bij voorkeur in Markdown (Marp), zodat dia's en handleiding uit één bron komen. |
 
-## Open punten
-
-- [x] Module F (tekenen): optioneel apart installatiescript `installatie\installeer-tekenen.ps1`; de docent kiest per laptop.
-- [x] Module L: demomodel `ministral-3:3b` (Mistral AI, Frankrijk) op de docentlaptop. In onze test riep het 5 van de 5 tools goed aan en sprak het goed Nederlands. Het is bewust een Europees model; zie module J over digitale soevereiniteit.
