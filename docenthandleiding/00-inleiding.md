@@ -76,7 +76,7 @@ Alle levels gebruiken het hulpbestand `fles.py`, dat de vraag naar Ollama stuurt
 
 **Snelle kinderen:** elk level heeft onderaan een *plus*- en een *expert*-opdracht. Wie klaar is, gaat daarmee door; niemand hoeft te wachten. Trage tweetallen mogen plus en expert gerust overslaan.
 
-Bijlagen: `90-problemen-oplossen.md` en `91-begrippenlijst.md`.
+Bijlage: `90-problemen-oplossen.md`.
 
 ## Voorbereiding: checklist
 
