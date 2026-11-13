@@ -1,0 +1,13 @@
+De Geest in de Fles
+===================
+
+start.bat                De geest wekken (start Ollama en Thonny)
+stop.bat                 Ollama stoppen
+status.bat               Kijken wat er draait en welke modellen er zijn
+docent-server.bat        De hele klas laten meedoen via deze laptop
+kopieer-naar-laptop.bat  Alles van de USB-stick naar deze laptop kopieren
+controleer.bat           Controleren of deze laptop geschikt is
+opruimen.bat             Alles weer verwijderen (ook je code in de map 'code'!)
+
+Je eigen code staat in de map 'code'.
+Meer uitleg: INSTALLATIE.md bij het lesmateriaal.
